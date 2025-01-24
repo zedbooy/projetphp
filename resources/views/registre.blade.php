@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSI Hub Sign Up</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .register-container h2 {
+            color: #3d9b35;
+            margin-bottom: 20px;
+        }
+        .register-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .register-container form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .register-container form button {
+            padding: 10px;
+            background-color: #3d9b35;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .register-container form button:hover {
+            background-color: #307a2a;
+        }
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Sign Up</h2>
+        <form id="registerForm" action="register.php" method="POST">
+            <input type="text" name="firstname" placeholder="First Name" required>
+            <input type="text" name="lastname" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="error-message" id="emailError">Invalid email address. Only @emsi-edu.ma emails are allowed.</div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
